@@ -1,12 +1,12 @@
 import type { Miniature, SiteConfig } from '../types/index.js';
 
 export const siteConfig: SiteConfig = {
-  authorName: 'Monster Painting',
+  authorName: 'Pablo Muñoz',
   tagline: 'El pincel es el arma. La miniatura, el campo de batalla.',
   bio: 'Pintor de miniaturas de fantasía medieval apasionado por dar vida a pequeñas obras de arte. Cada miniatura cuenta una historia.',
   socialLinks: {
-    instagram: 'https://instagram.com',
-    reddit: 'https://reddit.com/r/minipainting',
+    instagram: '',
+    reddit: '',
   }
 };
 
