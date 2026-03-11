@@ -60,5 +60,7 @@ export interface SiteConfig {
     reddit?: string;
     twitter?: string;
     youtube?: string;
+    facebook?: string;
+    
   };
 }

@@ -27,7 +27,7 @@ export const miniatures: Miniature[] = [
     ],
     paintingStyles: ['Layering',"NMM", 'Drybrushing'],
     difficulty: "Intermedio",
-    hoursSpent: 15,
+    hoursSpent: 10,
     completedAt: '2024-09-15',
     paints: [
 
@@ -51,7 +51,7 @@ export const miniatures: Miniature[] = [
     ],
     paintingStyles: ['Layering', 'NMM', 'Wet Blending'],
     difficulty: 'Intermedio',
-    hoursSpent: 18,
+    hoursSpent: 10,
     completedAt: '2024-09-03',
     paints: [
 
@@ -100,7 +100,7 @@ export const miniatures: Miniature[] = [
     ],
     paintingStyles: ['Layering', 'Wet Blending', 'NMM' ],
     difficulty: 'Intermedio',
-    hoursSpent: 15,
+    hoursSpent: 10,
     completedAt: '2025-01-10',
     paints: [
 

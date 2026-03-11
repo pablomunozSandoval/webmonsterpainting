@@ -175,12 +175,35 @@ export function renderMiniatureModal(mini: Miniature): void {
 
   document.body.appendChild(modal);
 
+
   // Close handlers
   modal.querySelector('.modal-close')!.addEventListener('click', () => modal.remove());
   modal.addEventListener('click', (e) => { if (e.target === modal) modal.remove(); });
+  
+  // Keyboard navigation
+  let currentIndex = 0;
   document.addEventListener('keydown', function onKey(e) {
-    if (e.key === 'Escape') { modal.remove(); document.removeEventListener('keydown', onKey); }
+    if (e.key === 'Escape') {
+      modal.remove();
+      document.removeEventListener('keydown', onKey);
+    }
+    if (e.key === 'ArrowRight') {
+      currentIndex = (currentIndex + 1) % allImages.length;
+      switchImage(currentIndex);
+    }
+    if (e.key === 'ArrowLeft') {
+      currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+      switchImage(currentIndex);
+    }
   });
+
+  function switchImage(index: number): void {
+    const mainImg = document.getElementById('modal-main-img') as HTMLImageElement;
+    if (mainImg) mainImg.src = allImages[index];
+    modal.querySelectorAll('.modal-thumb').forEach((t, i) => {
+      t.classList.toggle('active', i === index);
+    });
+  }
 
   // Thumbnail switching
   modal.querySelectorAll('.modal-thumb').forEach(thumb => {
